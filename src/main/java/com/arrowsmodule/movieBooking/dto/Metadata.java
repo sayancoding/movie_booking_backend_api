@@ -1,16 +1,17 @@
-package com.arrowsmodule.movieBooking.entity;
+package com.arrowsmodule.movieBooking.dto;
 
+import jakarta.persistence.MappedSuperclass;
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
+
 @Data
-public class UserMetadata {
-    private String status;
-    @CreationTimestamp
+@MappedSuperclass
+public class Metadata {
     private LocalDateTime createdAt;
-    @UpdateTimestamp
-    private LocalDateTime lastActiveAt;
+    private LocalDateTime modifiedAt;
 }

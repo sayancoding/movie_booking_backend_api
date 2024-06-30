@@ -1,16 +1,14 @@
-package com.arrowsmodule.movieBooking.entity;
+package com.arrowsmodule.movieBooking.dto;
 
+import lombok.Builder;
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 public class UserMetadata {
     private String status;
-    @CreationTimestamp
     private LocalDateTime createdAt;
-    @UpdateTimestamp
     private LocalDateTime lastActiveAt;
 }

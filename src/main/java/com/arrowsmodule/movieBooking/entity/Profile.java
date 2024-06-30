@@ -12,9 +12,9 @@ public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long profileId;
+
     private String firstName;
     private String lastName;
-
     private LocalDate dob;
     private String contactNo;
     private String alterContactNo;
